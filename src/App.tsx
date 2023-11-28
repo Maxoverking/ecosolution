@@ -1,9 +1,14 @@
 import "./App.module.css";
+import CustomizedAccordions from "./components/Accordion/Accordion";
 
 const App = (): JSX.Element => {
   return (
     <>
-      <h1>Eco</h1>
+      <div className="container">
+        <h1>Eco</h1>
+        <CustomizedAccordions />
+        <p>dfgfsdddddddddddddddddddd</p>
+      </div>
     </>
   );
 };
