@@ -1,5 +1,16 @@
 import { FC } from "react";
-import { BUTTON, DIV_FORM, FORM, INPUT, LABEL, TEXTAREA } from "./Form.styled";
+
+import {
+  BUTTON,
+  DIV_FORM,
+  DIV_SEND,
+  FORM,
+  ICON,
+  ICON_SPAN,
+  INPUT,
+  LABEL,
+  TEXTAREA,
+} from "./Form.styled";
 
 const Form: FC = () => {
   return (
@@ -22,7 +33,14 @@ const Form: FC = () => {
           rows={10}
           placeholder="My message...."
         ></TEXTAREA>
-        <BUTTON type="submit">Send</BUTTON>
+        <DIV_SEND>
+          <BUTTON type="submit">
+            Send{" "}
+            <ICON_SPAN>
+              <ICON />
+            </ICON_SPAN>
+          </BUTTON>
+        </DIV_SEND>
       </FORM>
     </DIV_FORM>
   );
