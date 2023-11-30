@@ -1,5 +1,6 @@
 import "./App.module.css";
 import CustomizedAccordions from "./components/Accordion/Accordion";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 const App = (): JSX.Element => {
   return (
@@ -7,7 +8,7 @@ const App = (): JSX.Element => {
       <div className="container">
         <h1>Eco</h1>
         <CustomizedAccordions />
-        <p>dfgfsdddddddddddddddddddd</p>
+        <ContactUs />
       </div>
     </>
   );
