@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { GoArrowRight } from "react-icons/go";
 
 export const DIV_FORM = styled.div`
-background-color: #EAEDF1;
+background-color: var(--gray);
 
 `;
 export const FORM = styled.form`

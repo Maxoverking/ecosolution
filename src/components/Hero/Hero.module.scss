@@ -1,0 +1,119 @@
+.hero {
+  margin-top: 112px;
+}
+.hero_title {
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 64px;
+    margin-bottom: 24px;
+  }
+}
+.title {
+  margin-bottom: 24px;
+}
+
+.hero_main_title {
+  @media screen and (min-width: 768px) {
+
+    margin: 0px;
+  }
+
+}
+.hero_title_container {
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+}
+.learn_btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+.learn_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 4px 4px 4px 16px;
+  border: 1px solid var(--green);
+  background-color: transparent;
+  color: var(--main-text-color);
+  border-radius: 500px;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out,
+    border 250ms ease-in-out;
+  &:hover {
+    border: 1px solid var(--main-text-color);
+    background-color: var(--main-text-color);
+    color: var(--green);
+  }
+}
+.arrow_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-left: 12px;
+  color: var(--main-text-color);
+  background-color: var(--green);
+}
+.green_line {
+  border: none;
+  height: 1px;
+  margin: 0px;
+  background-color: var(--green);
+}
+.contact_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0px 36px;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.contact {
+  font-size: 14px;
+  text-align: center;
+  @media screen and (min-width: 360px) {
+    font-size: 16px;
+    // letter-spacing: -4%;
+  }
+}
+.eco_desktop {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.hero_img {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_list_address {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+}
+.contact_list_mail {
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+}

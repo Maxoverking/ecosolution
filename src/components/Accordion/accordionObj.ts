@@ -20,7 +20,7 @@ export const accordionObj = [
             "What measures does EcoSolution take to ensure the environmental sustainability of its products?",
     },
     {
-        id: "panel5",
+        id: "5",
         question:
             "How does EcoSolution engage with local communities and support a just transition to renewable energy?",
     },

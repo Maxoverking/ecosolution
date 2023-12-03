@@ -1,0 +1,5 @@
+// .babelrc или babel.config.js
+
+{
+  "plugins": ["@babel/plugin-transform-react-jsx"]
+}

@@ -1,6 +1,8 @@
 :root {
   --white: #ffffff;
   --main-text-color: #173d33;
+  --overlay_modal: rgb(22, 59, 49, 25%);
   --green: #97d28b;
+  --gray: #eaedf1;
   --light-green: #dcefd8;
 }

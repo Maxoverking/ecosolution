@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 112px;
+}
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+.title_logo {
+  display: none;
+  @media screen and (min-width: 360px) {
+    display: flex;
+    align-items: flex-end;
+    height: 23px;
+    margin-left: 4px;
+  }
+}
+.nav {
+  display: flex;
+}
+.burger_btn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #dcefd8;
+  border-radius: 100%;
+  transition: background-color 250ms ease-in-out;
+  &:hover {
+    background-color: var(--green);
+  }
+}
+.learn_btn {
+  display: none;
+  font-size: 16px;
+  padding: 4px 16px;
+  border: 1px solid var(--green);
+  background-color: var(--green);
+  color: var(--main-text-color);
+  border-radius: 500px;
+  margin-left: 12px;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out,
+    border 250ms ease-in-out;
+  &:hover {
+    border: 1px solid var(--main-text-color);
+    background-color: var(--main-text-color);
+    color: var(--green);
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.arrow_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  margin-left: 12px;
+  color: var(--main-text-color);
+  background-color: var(--main-text-color);
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  .learn_btn:hover & {
+    background-color: var(--main-text-color);
+    color: var(--green);
+  }
+}

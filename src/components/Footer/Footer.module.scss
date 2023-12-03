@@ -1,0 +1,76 @@
+.footer {
+  margin: 36px 0px 24px 0px;
+}
+.hr {
+  border: none;
+  height: 1px;
+  margin: 0px;
+  background-color: var(--green);
+  margin-bottom: 24px;
+}
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+.title_logo {
+  display: flex;
+  align-items: flex-end;
+  height: 23px;
+  margin-left: 4px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0px;
+}
+
+.address_title {
+  font-size: 16px;
+  text-align: center;
+  font-style: normal;
+}
+
+.mail {
+  font-size: 16px;
+}
+
+.font-eco_title {
+  font-size: 16px;
+}
+.icon_social {
+  transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
+
+  & .fb > path:first-child {
+    transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
+    fill: var(--main-text-color);
+  }
+
+  & .fb > path:not(:first-child) {
+    transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
+    stroke: var(--main-text-color);
+  }
+
+  & .instagram > path {
+    transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
+    stroke: var(--main-text-color);
+  }
+
+  &:hover .fb > path:first-child {
+    fill: var(--green);
+  }
+  &:hover .fb > path:not(:first-child) {
+    stroke: var(--green);
+  }
+  &:hover .instagram > path {
+    stroke: var(--green);
+  }
+}

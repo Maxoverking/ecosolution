@@ -14,7 +14,7 @@ import Form from "./Form";
 
 const ContactUs: FC = () => {
   return (
-    <CONTACT_Container>
+    <CONTACT_Container id="contact">
       <H2>Contact us</H2>
       <div>
         <div>

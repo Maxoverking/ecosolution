@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import Icons from "./Icons";
 
 
 export const CONTACT_Container = styled.section`
 `;
 export const H2 = styled.h2`
 text-align: center;
+`;
+export const ICONS = styled(Icons)`
+
 `;
 export const SPAN_TITLE = styled.p`
     margin-bottom:8px;
@@ -36,5 +40,10 @@ export const SOCIAL_LINK = styled.div`
     display: flex;
     margin-top:20px;
     gap:32px;
+
+`;
+export const DIV_LOGO = styled.div`
+    display: flex;
+    
 
 `;
