@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { PiArrowRight } from "react-icons/pi";
 import scss from "./Hero.module.scss";
-import { contactObj } from "../content/contact.data";
+import { contactObj } from "../ContactUs/content/contact.data";
 import ImgHero from "./ImgHero";
 
 const Hero: FC = () => {

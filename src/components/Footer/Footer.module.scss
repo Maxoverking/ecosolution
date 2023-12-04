@@ -24,7 +24,9 @@
 }
 .logo_container {
   display: flex;
-  align-items: center;
+
+  justify-content: center;
+  align-items: flex-end;
   @media screen and (min-width: 950px) {
     margin-right: 170px;
   }
@@ -81,8 +83,20 @@
 }
 
 .arrow_up {
-  display: flex;
-  align-items: flex-end;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.title_icon {
+  margin-bottom: 6px;
+}
+.arrow_up_mobile {
+  margin-left: 14px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .arrow {
   border-radius: 100%;

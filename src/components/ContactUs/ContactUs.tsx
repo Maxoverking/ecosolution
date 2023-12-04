@@ -5,7 +5,7 @@ import EMAIL from "../../icons/email.svg?react";
 import MAP from "../../icons/map.svg?react";
 
 import Form from "./Form";
-import { contactObj } from "../content/contact.data";
+import { contactObj } from "./content/contact.data";
 import SocialMedia from "../SocialMedia/SocialMedia";
 
 const ContactUs: FC = () => {
@@ -35,7 +35,7 @@ const ContactUs: FC = () => {
                     href={`tel:${contactObj.phone[1]}`}
                     aria-label="phone"
                   >
-                    38 (098) 12 34 567
+                    38 (093) 12 34 567
                   </a>
                 </span>
               </div>
