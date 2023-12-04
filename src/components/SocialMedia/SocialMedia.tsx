@@ -9,7 +9,7 @@ const SocialMedia: FC = () => {
       <a href="#" className={scss.icon_social}>
         <FB className={scss.fb} aria-label="facebook" />
       </a>
-      <a href="#" className={scss.icon_social}>
+      <a href="#" className={scss.icon_social} aria-label="instagram">
         <INSTAGRAM className={scss.instagram} />
       </a>
     </>

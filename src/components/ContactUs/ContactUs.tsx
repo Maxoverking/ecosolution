@@ -22,7 +22,8 @@ const ContactUs: FC = () => {
                   <PHONE className={scss.icon} />
                   <a
                     className={scss.link_contact}
-                    href={`${contactObj.phone[0]}`}
+                    href={`tel:${contactObj.phone[0]}`}
+                    aria-label="phone"
                   >
                     38 (098) 12 34 567
                   </a>
@@ -31,7 +32,8 @@ const ContactUs: FC = () => {
                   <PHONE className={scss.icon} />
                   <a
                     className={scss.link_contact}
-                    href={`${contactObj.phone[1]}`}
+                    href={`tel:${contactObj.phone[1]}`}
+                    aria-label="phone"
                   >
                     38 (098) 12 34 567
                   </a>
@@ -45,6 +47,7 @@ const ContactUs: FC = () => {
                 <a
                   className={scss.link_contact}
                   href={`mailto:${contactObj.email}`}
+                  aria-label="email"
                 >
                   {contactObj.email}
                 </a>
@@ -58,6 +61,7 @@ const ContactUs: FC = () => {
                   href={`http://maps.google.com/?q=:${contactObj.address}`}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="address"
                 >
                   <MAP className={scss.icon} />
 
