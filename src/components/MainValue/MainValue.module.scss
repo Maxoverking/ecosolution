@@ -59,9 +59,10 @@
   align-items: center;
   text-transform: uppercase;
   gap: 8px;
-  letter-spacing: -2px;
+
   margin-bottom: 32px;
   @media screen and (min-width: 1240px) {
+    letter-spacing: -2px;
     font-size: 32px;
     gap: 0px;
     margin-bottom: 94px;
