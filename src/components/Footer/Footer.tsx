@@ -1,36 +1,39 @@
 import { FC } from "react";
 import scss from "./Footer.module.scss";
-import FB from "../../icons/facebook.svg?react";
-import INSTAGRAM from "../../icons/instagram.svg?react";
+
+import { BsArrowUpCircleFill } from "react-icons/bs";
 
 import { contactObj } from "../content/contact.data";
 import Logo from "../Logo/Logo";
 import Icons from "../ContactUs/Icons";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const Footer: FC = () => {
   return (
     <footer className={scss.footer}>
       <hr className={scss.hr} />
       <div>
-        <div className={scss.logo_container}>
-          <Logo />
-          <div className={scss.title_logo}>
-            <Icons
-              name={"GREENERGY-FOR-LIFE"}
-              classIcons={""}
-              width={60}
-              height={18}
-            />
+        <div className={scss.footer_grid}>
+          <div className={scss.logo_container}>
+            <Logo />
+            <div className={scss.title_logo}>
+              <Icons
+                name={"GREENERGY-FOR-LIFE"}
+                classIcons={""}
+                width={60}
+                height={18}
+              />
+            </div>
           </div>
-        </div>
 
-        <div className={scss.icons}>
-          <a href="#" className={scss.icon_social}>
-            <FB className={scss.fb} aria-label="facebook" />
-          </a>
-          <a href="#" className={scss.icon_social}>
-            <INSTAGRAM className={scss.instagram} />
-          </a>
+          <div className={scss.icons}>
+           <SocialMedia />
+          </div>
+          <div className={scss.arrow_up}>
+            <a href="#main" aria-label="arrow up">
+              <BsArrowUpCircleFill size={32} className={scss.arrow} />
+            </a>
+          </div>
         </div>
 
         <div className={scss.address}>

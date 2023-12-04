@@ -1,80 +1,83 @@
 import { FC } from "react";
-import {
-  A,
-  ADDRESS,
-  CONTACT_Container,
-  H2,
-  LI,
-  SOCIAL_LINK,
-  SPAN_PHONE,
-  SPAN_TITLE,
-} from "./ContactUs.styles";
-import Icons from "./Icons";
+import scss from "./ContactUs.module.scss";
+import PHONE from "../../icons/phone.svg?react";
+import EMAIL from "../../icons/email.svg?react";
+import MAP from "../../icons/map.svg?react";
+
 import Form from "./Form";
+import { contactObj } from "../content/contact.data";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const ContactUs: FC = () => {
   return (
-    <CONTACT_Container id="contact">
-      <H2>Contact us</H2>
-      <div>
+    <section className={scss.contact_section} id="contact">
+      <h2 className={scss.title}>Contact us</h2>
+      <div className={scss.contact_container}>
         <div>
           <ul>
-            <LI>
-              <SPAN_TITLE>Phone:</SPAN_TITLE>
-              <SPAN_PHONE>
-                <Icons name={"call"} classIcons={""} width={24} height={24} />
-                <A href="tel:+380981234567">38 (098) 12 34 567</A>
-              </SPAN_PHONE>
-              <SPAN_PHONE>
-                <Icons name={"call"} classIcons={""} width={24} height={24} />
-                <A href="tel:+380981234567">38 (098) 12 34 567</A>
-              </SPAN_PHONE>
-            </LI>
-            <LI>
-              <SPAN_TITLE>Email:</SPAN_TITLE>
-              <SPAN_PHONE>
-                <Icons name={"sms"} classIcons={""} width={24} height={24} />
-                <A href="mailto:office@ecosolution.com">
-                  office@ecosolution.com
-                </A>
-              </SPAN_PHONE>
-            </LI>
-            <LI>
-              <SPAN_TITLE>Address:</SPAN_TITLE>
-              <SPAN_PHONE>
-                <Icons name={"map"} classIcons={""} width={40} height={24} />
+            <li className={scss.desc}>
+              <p className={scss.desc}>Phone:</p>
+              <div className={scss.container_phone}>
+                <span className={scss.phone}>
+                  <PHONE className={scss.icon} />
+                  <a
+                    className={scss.link_contact}
+                    href={`${contactObj.phone[0]}`}
+                  >
+                    38 (098) 12 34 567
+                  </a>
+                </span>
+                <span className={scss.phone}>
+                  <PHONE className={scss.icon} />
+                  <a
+                    className={scss.link_contact}
+                    href={`${contactObj.phone[1]}`}
+                  >
+                    38 (098) 12 34 567
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li className={scss.desc}>
+              <p className={scss.desc}>Email:</p>
+              <span className={scss.phone}>
+                <EMAIL className={scss.icon} />
+                <a
+                  className={scss.link_contact}
+                  href={`mailto:${contactObj.email}`}
+                >
+                  {contactObj.email}
+                </a>
+              </span>
+            </li>
+            <li className={scss.desc}>
+              <p className={scss.desc}>Address:</p>
+              <span className={scss.phone}>
+                <a
+                  className={scss.contact}
+                  href={`http://maps.google.com/?q=:${contactObj.address}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <MAP className={scss.icon} />
 
-                <ADDRESS>
-                  79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-                </ADDRESS>
-              </SPAN_PHONE>
-            </LI>
-            <LI>
-              <SPAN_TITLE>Social Networks:</SPAN_TITLE>
-              <SOCIAL_LINK>
-                <A href="#">
-                  <Icons
-                    name={"facebook"}
-                    classIcons={""}
-                    width={24}
-                    height={24}
-                  />
-                </A>
-                <A href="#">
-                  <Icons
-                    name={"instagram"}
-                    classIcons={""}
-                    width={24}
-                    height={24}
-                  />
-                </A>
-              </SOCIAL_LINK>
-            </LI>
+                  <address className={scss.address}>
+                    {contactObj.address}
+                  </address>
+                </a>
+              </span>
+            </li>
+            <li className={scss.desc}>
+              <p className={scss.desc}>Social Networks:</p>
+              <div className={scss.social_link}>
+                <SocialMedia />
+              </div>
+            </li>
           </ul>
         </div>
         <Form />
       </div>
-    </CONTACT_Container>
+    </section>
   );
 };
 

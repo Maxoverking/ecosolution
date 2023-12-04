@@ -11,7 +11,7 @@ const Header: FC = () => {
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
   return (
-    <header className={scss.header}>
+    <header className={scss.header} id="main">
       <div className={scss.logo_container}>
         <Logo />
         <div className={scss.title_logo}>

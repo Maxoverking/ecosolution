@@ -1,45 +1,19 @@
-.menu_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 95%;
-}
-.menu_title {
-  display: flex;
-  font-family: "Fira Sans";
-  font-size: 24px;
-  color: rgb(255, 255, 255, 25%);
-  transition: color 200ms ease-in-out;
-  gap: 6px;
-  &:hover {
-    color: var(--white);
-  }
-}
-.active {
-  color: var(--green);
-}
-.icons {
-  display: flex;
-
-  gap: 8px;
-  margin: 24px 0px;
-}
 .icon_social {
   transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
 
   & .fb > path:first-child {
     transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
-    fill: var(--white);
+    fill: var(--main-text-color);
   }
 
   & .fb > path:not(:first-child) {
     transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
-    stroke: var(--white);
+    stroke: var(--main-text-color);
   }
 
   & .instagram > path {
     transition: fill 250ms ease-in-out, stroke 250ms ease-in-out;
-    stroke: var(--white);
+    stroke: var(--main-text-color);
   }
 
   &:hover .fb > path:first-child {
