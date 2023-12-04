@@ -5,8 +5,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding: 36px 12px;
+  padding: 36px 12px 0px;
   margin-top: 12px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 36px;
+  }
 }
 .wrap {
   display: flex;
