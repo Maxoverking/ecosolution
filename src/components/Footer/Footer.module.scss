@@ -3,7 +3,7 @@
   @media screen and (min-width: 768px) {
     margin: 100px 0px 40px 0px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1240px) {
     margin: 120px 0px 40px 0px;
   }
 }
@@ -89,7 +89,9 @@
   background-color: var(--main-text-color);
   color: var(--green);
   transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: var(--green);
     color: var(--main-text-color);
   }

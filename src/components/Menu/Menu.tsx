@@ -3,8 +3,11 @@ import { GoArrowUpRight } from "react-icons/go";
 import FB from "../../icons/facebook.svg?react";
 import INSTAGRAM from "../../icons/instagram.svg?react";
 import scss from "./Menu.module.scss";
+interface IModal {
+  onClose: (newValue: boolean) => void;
+}
 
-const Menu: FC = () => {
+const Menu: FC<IModal> = ({ onClose }) => {
   const [anchor, setAnchor] = useState("");
 
   console.log("🚀  anchor:", anchor);
@@ -21,7 +24,7 @@ const Menu: FC = () => {
               anchor === "main" || anchor === "" ? scss.active : ""
             } `}
           >
-            <a href="#main">
+            <a href="#main" onClick={() => onClose(false)}>
               Main{" "}
               <span>
                 <GoArrowUpRight size={16} />
@@ -33,7 +36,7 @@ const Menu: FC = () => {
               anchor === "about" ? scss.active : ""
             } `}
           >
-            <a href="#about">
+            <a href="#about" onClick={() => onClose(false)}>
               About{" "}
               <span>
                 <GoArrowUpRight size={16} />
@@ -45,7 +48,7 @@ const Menu: FC = () => {
               anchor === "cases" ? scss.active : ""
             } `}
           >
-            <a href="#cases">
+            <a href="#cases" onClick={() => onClose(false)}>
               Cases{" "}
               <span>
                 <GoArrowUpRight size={16} />
@@ -57,7 +60,7 @@ const Menu: FC = () => {
               anchor === "faq" ? scss.active : ""
             } `}
           >
-            <a href="#faq">
+            <a href="#faq" onClick={() => onClose(false)}>
               FAQ{" "}
               <span>
                 <GoArrowUpRight size={16} />
@@ -69,7 +72,7 @@ const Menu: FC = () => {
               anchor === "contact" ? scss.active : ""
             } `}
           >
-            <a href="#contact">
+            <a href="#contact" onClick={() => onClose(false)}>
               Contact{" "}
               <span>
                 <GoArrowUpRight size={16} />
@@ -78,10 +81,18 @@ const Menu: FC = () => {
           </li>
         </ul>
         <div className={scss.icons}>
-          <a href="#" className={scss.icon_social}>
+          <a
+            href="#"
+            className={scss.icon_social}
+            onClick={() => onClose(false)}
+          >
             <FB className={scss.fb} aria-label="facebook" />
           </a>
-          <a href="#" className={scss.icon_social}>
+          <a
+            href="#"
+            className={scss.icon_social}
+            onClick={() => onClose(false)}
+          >
             <INSTAGRAM className={scss.instagram} />
           </a>
         </div>

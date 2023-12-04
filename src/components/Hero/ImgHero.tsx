@@ -1,8 +1,8 @@
 import { FC } from "react";
-import mobileHero1xJ from "../../images/hero-mobile@1x.jpg";
-import mobileHero2xJ from "../../images/hero-mobile@2x.jpg";
-import mobileHero1xW from "../../images/hero-mobile@1x.webp";
-import mobileHero2xW from "../../images/hero-mobile@2x.webp";
+// import mobileHero1xJ from "../../images/hero-mobile@1x.jpg";
+// import mobileHero2xJ from "../../images/hero-mobile@2x.jpg";
+// import mobileHero1xW from "../../images/hero-mobile@1x.webp";
+// import mobileHero2xW from "../../images/hero-mobile@2x.webp";
 import tabletHero1xJ from "../../images/hero-tablet@1x.jpg";
 import tabletHero2xJ from "../../images/hero-tablet@2x.jpg";
 import tabletHero1xW from "../../images/hero-tablet@1x.webp";
@@ -37,7 +37,7 @@ const ImgHero: FC = () => {
           type="image/jpeg"
         />
 
-        <source
+        {/* <source
           media="(min-width: 320px)"
           srcSet={`${mobileHero1xW} 1x ,${mobileHero2xW} 2x `}
           type="image/webp"
@@ -46,10 +46,10 @@ const ImgHero: FC = () => {
           media="(min-width: 320px)"
           srcSet={`${mobileHero1xJ} 1x , ${mobileHero2xJ} 2x`}
           type="image/jpeg"
-        />
+        /> */}
 
         <img
-          src={`${mobileHero1xJ}`}
+          src={`${tabletHero1xJ}`}
           alt="Turbine"
           loading="lazy"
           sizes="(max-width: 767px) 320px, (min-width: 768px) 768px, (min-width: 1280px) 1280px"

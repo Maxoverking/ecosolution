@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import scss from "./Modal.module.scss";
-import { MouseEvent, useEffect } from "react";
+import { FC, MouseEvent, useEffect } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import Menu from "../Menu/Menu";
 const modalRoot = document.getElementById("modal-root");
@@ -9,7 +9,7 @@ interface IModal {
   onClose: (newValue: boolean) => void;
 }
 
-const Modal = ({ onClose }: IModal): JSX.Element => {
+const Modal: FC<IModal> = ({ onClose }) => {
   useEffect(() => {
     window.addEventListener("keydown", addKeyDown);
     return () => {
@@ -43,7 +43,7 @@ const Modal = ({ onClose }: IModal): JSX.Element => {
           close
         </button>
         <hr className={scss.line} />
-        <Menu />
+        <Menu onClose={onClose} />
       </div>
     </div>,
     modalRoot as HTMLElement

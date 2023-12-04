@@ -10,14 +10,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { GoPlus } from "react-icons/go";
 import { FaMinus } from "react-icons/fa6";
 import { accordionObj } from "./accordionObj";
-import {
-  Accordion_Container,
-  BUTTON,
-  DIV_QUESTION,
-  H2,
-  ICON,
-  SPAN,
-} from "./Accordion.styled";
+import scss from "./Accordion.module.scss";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
 interface CustomAccordionSummaryProps extends AccordionSummaryProps {
   expanded: boolean;
@@ -79,49 +73,64 @@ const CustomizedAccordions: FC = () => {
     };
 
   return (
-    <Accordion_Container>
-      <div>
-        <H2>Frequently Asked Questions</H2>
+    <section className={scss.section_accordion} id="faq">
+      <h2 className={scss.title}>Frequently Asked Questions</h2>
 
-        <div>
-          {accordionObj.map(({ id, question }) => (
-            <CustomAccordion
-              key={id}
+      <div className={scss.accordion}>
+        {accordionObj.map(({ id, question }) => (
+          <CustomAccordion
+            key={id}
+            expanded={expanded === id}
+            onChange={handleChange(id)}
+          >
+            <CustomAccordionSummary
+              aria-controls={`panel${id}d-content`}
+              id={`${id}d-header`}
               expanded={expanded === id}
-              onChange={handleChange(id)}
             >
-              <CustomAccordionSummary
-                aria-controls={`panel${id}d-content`}
-                id={`${id}d-header`}
-                expanded={expanded === id}
-              >
-                <p>{question}</p>
-              </CustomAccordionSummary>
-              <CustomAccordionDetails>
-                <p>
-                  Wind turbines and solar panels generate electricity through
-                  different mechanisms. Wind turbines harness the kinetic energy
-                  of the wind to turn blades, which then drive a generator.
-                  Solar panels convert sunlight into electricity through the
-                  photovoltaic effect. When integrated into a renewable energy
-                  system, these technologies complement each other by providing
-                  a continuous and reliable power supply. Wind power is often
-                  more abundant during certain times, while solar power is
-                  consistent during daylight hours, resulting in a more stable
-                  overall energy output.
-                </p>
-              </CustomAccordionDetails>
-            </CustomAccordion>
-          ))}
-        </div>
-        <DIV_QUESTION>
-          <SPAN>Didn't find the answer to your question? </SPAN>
-          <BUTTON type="button">
-            Contact Us <ICON />
-          </BUTTON>
-        </DIV_QUESTION>
+              <p>{question}</p>
+            </CustomAccordionSummary>
+            <CustomAccordionDetails>
+              <p>
+                Wind turbines and solar panels generate electricity through
+                different mechanisms. Wind turbines harness the kinetic energy
+                of the wind to turn blades, which then drive a generator. Solar
+                panels convert sunlight into electricity through the
+                photovoltaic effect. When integrated into a renewable energy
+                system, these technologies complement each other by providing a
+                continuous and reliable power supply. Wind power is often more
+                abundant during certain times, while solar power is consistent
+                during daylight hours, resulting in a more stable overall energy
+                output.
+              </p>
+            </CustomAccordionDetails>
+          </CustomAccordion>
+        ))}
       </div>
-    </Accordion_Container>
+      <div className={scss.question}>
+        <div>
+          {" "}
+          <h2 className={scss.title_tablet}>Frequently Asked Questions</h2>
+        </div>
+        <div>
+          <span className={scss.question_title}>
+            Didn't find the answer to your question?{" "}
+          </span>
+          <div className={scss.btn_wrap}>
+            <a
+              href="#contact"
+              className={scss.learn_btn}
+              aria-label="contact us"
+            >
+              Contact Us
+              <span className={scss.arrow_btn}>
+                <BsFillArrowDownCircleFill size={16} />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

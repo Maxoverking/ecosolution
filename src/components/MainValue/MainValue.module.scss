@@ -57,11 +57,19 @@
 .title {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   gap: 8px;
+  letter-spacing: -2px;
   margin-bottom: 32px;
   @media screen and (min-width: 1240px) {
     font-size: 32px;
+    gap: 0px;
     margin-bottom: 94px;
+    align-items: flex-end;
+  }
+  & > svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -83,8 +91,8 @@
     flex: 1;
   }
   @media screen and (min-width: 1240px) {
-    padding: 48px 24px;
-    height: 282px;
+    padding: 48px 20px;
+    height: 300px;
     width: 224px;
     flex: none;
   }
@@ -113,5 +121,12 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
+  }
+}
+
+.img {
+  @media screen and (min-width: 1240px) {
+    width: 496px;
+    height: 300px;
   }
 }

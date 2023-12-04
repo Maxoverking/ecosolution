@@ -70,6 +70,12 @@ const Form: FC = () => {
 
     if (!fullNameError && !emailError && !phoneError) {
       console.log("Form submitted:", formData);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   };
 
@@ -91,7 +97,9 @@ const Form: FC = () => {
             onChange={(e) => handleInputChange("fullName", e.target.value)}
           />
           <div className={scss.input_error}>
-            <span className={scss.error}>{errors.fullName}</span>
+            <span className={scss.error} role="alert">
+              {errors.fullName}
+            </span>
           </div>
         </div>
         <div className={scss.wrap}>
@@ -109,7 +117,9 @@ const Form: FC = () => {
             onChange={(e) => handleInputChange("email", e.target.value)}
           />
           <div className={scss.input_error}>
-            <span className={scss.error}>{errors.email}</span>
+            <span className={scss.error} role="alert">
+              {errors.email}
+            </span>
           </div>
         </div>
         <div className={scss.wrap}>
@@ -127,7 +137,9 @@ const Form: FC = () => {
             onChange={(e) => handleInputChange("phone", e.target.value)}
           />
           <div className={scss.input_error}>
-            <span className={scss.error}>{errors.phone}</span>
+            <span className={scss.error} role="alert">
+              {errors.phone}
+            </span>
           </div>
         </div>
         <label className={scss.label} htmlFor="message">

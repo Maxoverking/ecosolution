@@ -33,10 +33,14 @@
   align-items: flex-end;
   margin-bottom: 12px;
   color: var(--main-text-color);
-  &:hover .link_contact {
+  &:hover .link_contact,
+  &:focus .link_contact,
+  &:active .link_contact {
     color: var(--green);
   }
-  &:hover .icon > path {
+  &:hover .icon > path,
+  &:focus .icon > path,
+  &:active .icon > path {
     stroke: var(--green);
   }
 }

@@ -21,12 +21,12 @@ const Hero: FC = () => {
             biomass
           </p>
           <div className={scss.learn_btn_container}>
-            <button className={scss.learn_btn} type="button">
+            <a href="#cases" className={scss.learn_btn}>
               Learn more
               <span className={scss.arrow_btn}>
                 <PiArrowRight size={16} />
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

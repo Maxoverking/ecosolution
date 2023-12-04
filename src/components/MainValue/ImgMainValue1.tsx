@@ -1,4 +1,5 @@
 import { FC } from "react";
+import scss from "./MainValue.module.scss";
 import tabletValues1xJ from "../../images/values-1-tablet@1x.jpg";
 import tabletValues1xW from "../../images/values-1-tablet@1x.webp";
 import tabletValues2xJ from "../../images/values-1-tablet@2x.jpg";
@@ -33,7 +34,7 @@ const ImgMainValue1: FC = () => {
           type="image/jpeg"
         />
         <img
-          // style={{ width: "342px", height: "197px" }}
+          className={scss.img}
           src={`${tabletValues1xJ}`}
           alt="Turbine"
           loading="lazy"

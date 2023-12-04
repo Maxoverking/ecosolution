@@ -6,7 +6,7 @@ import ImgMainValue2 from "./ImgMainValue2";
 
 const MainValue: FC = () => {
   return (
-    <section>
+    <section id="about">
       <div className={scss.main}>
         <h2 className={scss.main_title}>Main values of our company</h2>
         <div className={scss.main_desc_container}>

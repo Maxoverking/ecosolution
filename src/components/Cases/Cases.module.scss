@@ -1,0 +1,9 @@
+.section_cases {
+  padding-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 107px;
+  }
+  @media screen and (min-width: 1240px) {
+    padding-bottom: 127px;
+  }
+}
