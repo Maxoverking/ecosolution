@@ -9,9 +9,9 @@ const Hero: FC = () => {
     <section className={scss.hero}>
       <div className={scss.hero_title}>
         <div>
-          <h2 className={scss.hero_main_title}>
+          <h1 className={scss.hero_main_title}>
             RENEWABLE ENERGY FOR ANY TASK
-          </h2>
+          </h1>
         </div>
 
         <div className={scss.hero_title_container}>

@@ -93,7 +93,7 @@ const Menu: FC<IModal> = ({ onClose }) => {
             className={scss.icon_social}
             onClick={() => onClose(false)}
           >
-            <INSTAGRAM className={scss.instagram} />
+            <INSTAGRAM className={scss.instagram} aria-label="instagram" />
           </a>
         </div>
       </div>

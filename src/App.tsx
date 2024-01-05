@@ -11,18 +11,16 @@ import MainValue from "./components/MainValue/MainValue";
 const App = (): JSX.Element => {
   return (
     <>
-      <div className="container">
-        <Header />
-        <main>
-          <Hero />
-          <MainValue />
-          <CounterKwh />
-          <Cases />
-          <CustomizedAccordions />
-          <ContactUs />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main className="container">
+        <Hero />
+        <MainValue />
+        <CounterKwh />
+        <Cases />
+        <CustomizedAccordions />
+        <ContactUs />
+      </main>
+      <Footer />
     </>
   );
 };

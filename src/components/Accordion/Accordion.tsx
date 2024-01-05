@@ -22,6 +22,7 @@ const CustomAccordion = styled((props: MuiAccordionProps) => (
   border: `1px solid #97d28b`,
   borderRight: 0,
   borderLeft: 0,
+  backgroundColor: "#f3f5fa",
 
   "&:not(:last-child)": {
     borderBottom: 0,
@@ -35,11 +36,11 @@ const CustomAccordionSummary = styled(
   ({ expanded, ...props }: CustomAccordionSummaryProps) => (
     <MuiAccordionSummary
       expandIcon={
-        <span style={{ color: "#97d28b", fontSize: "30px", display: "flex" }}>
+        <span style={{ color: "#97d28b", fontSize: "16px", display: "flex" }}>
           {expanded ? (
             <FaMinus style={{ color: "#173D33" }} />
           ) : (
-            <GoPlus size="30px" />
+            <GoPlus size="16px" />
           )}
         </span>
       }
@@ -88,10 +89,10 @@ const CustomizedAccordions: FC = () => {
               id={`${id}d-header`}
               expanded={expanded === id}
             >
-              <p>{question}</p>
+              <p className={scss.accordion_title}>{question}</p>
             </CustomAccordionSummary>
             <CustomAccordionDetails>
-              <p>
+              <p className={scss.accordion_description}>
                 Wind turbines and solar panels generate electricity through
                 different mechanisms. Wind turbines harness the kinetic energy
                 of the wind to turn blades, which then drive a generator. Solar

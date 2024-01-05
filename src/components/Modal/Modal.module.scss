@@ -20,6 +20,7 @@
   overflow: hidden;
   animation: fadeIn 0.2s ease-in-out;
   backdrop-filter: blur(2px);
+  z-index: 800;
 }
 .modal_container {
   position: absolute;

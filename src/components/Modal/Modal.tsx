@@ -11,8 +11,10 @@ interface IModal {
 
 const Modal: FC<IModal> = ({ onClose }) => {
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", addKeyDown);
     return () => {
+      document.body.style.overflow = "";
       window.removeEventListener("keydown", addKeyDown);
     };
   });

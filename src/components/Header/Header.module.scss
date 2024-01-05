@@ -1,8 +1,15 @@
 .header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header_wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 112px;
+  padding: 36px 0px;
 }
 .logo_container {
   display: flex;

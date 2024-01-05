@@ -1,34 +1,25 @@
-@import "./css/colors.css";
 @import "./css/fonts.css";
+:root {
+  --white: #ffffff;
+  --main-text-color: #173d33;
+  --page-color: #f3f5fa;
+  --overlay_modal: rgb(22, 59, 49, 25%);
+  --green: #97d28b;
+  --gray: #eaedf1;
+  --light-green: #dcefd8;
+  --error: #d28b8b;
+}
 
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Fira Sans";
+  background-color: var(--page-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container {
-  max-width: 1340px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
-@media screen and (min-width: 769px) and (max-width: 1239px) {
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .container {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
 button {
   margin: 0;
   padding: 0;
@@ -78,19 +69,32 @@ span {
   font-family: "Fira Sans";
   font-weight: 400;
 }
+h1 {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: var(--main-text-color);
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+  }
+}
 
 h2 {
   font-family: "Oswald";
   text-transform: uppercase;
-  margin: 36px 0px 24px 0px;
-  font-size: 30px;
+  margin: 0px 0px 24px 0px;
+  font-size: 28px;
   font-weight: 400;
   color: var(--main-text-color);
   @media screen and (min-width: 768px) {
-    font-size: 48px;
-  }
-  @media screen and (min-width: 1240px) {
-    font-size: 64px;
+    font-size: 36px;
   }
 }
 h4 {
@@ -108,4 +112,37 @@ a .logo {
 
 .ico .call:hover {
   fill: red;
+}
+
+.container {
+  width: 100%;
+  // min-width: 360px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* MOBILE */
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* TABLET */
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* DESKTOP */
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+section {
+  margin: 36px 0px;
 }

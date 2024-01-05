@@ -3,6 +3,7 @@ import scss from "./MainValue.module.scss";
 import Icons from "../ContactUs/Icons";
 import ImgMainValue1 from "./ImgMainValue1";
 import ImgMainValue2 from "./ImgMainValue2";
+import { mainValueObj } from "./mainValueObj";
 
 const MainValue: FC = () => {
   return (
@@ -11,13 +12,7 @@ const MainValue: FC = () => {
         <h2 className={scss.main_title}>Main values of our company</h2>
         <div className={scss.main_desc_container}>
           <hr className={scss.green_line} />
-          <p className={scss.main_desc}>
-            EcoSolution envisions a world where sustainable energy solutions
-            power a brighter and cleaner future for all. We aspire to be at the
-            forefront of the global shift towards renewable energy, leading the
-            way in innovative technologies that harness the power of nature to
-            meet the world's energy needs.
-          </p>
+          <p className={scss.main_desc}>{mainValueObj.title}</p>
         </div>
       </div>
       <div className={scss.value_container}>
@@ -26,12 +21,14 @@ const MainValue: FC = () => {
             <div className={scss.card}>
               <h4 className={scss.title}>
                 {" "}
-                <Icons
-                  name={"maximize"}
-                  classIcons={""}
-                  width={16}
-                  height={16}
-                />
+                <span className={scss.icon_container}>
+                  <Icons
+                    name={"maximize"}
+                    classIcons={""}
+                    width={16}
+                    height={16}
+                  />
+                </span>
                 Openness
               </h4>
               <hr className={scss.hr} />
@@ -42,7 +39,14 @@ const MainValue: FC = () => {
             <div className={scss.card}>
               <h4 className={scss.title}>
                 {" "}
-                <Icons name={"global"} classIcons={""} width={16} height={16} />
+                <span className={scss.icon_container}>
+                  <Icons
+                    name={"global"}
+                    classIcons={""}
+                    width={16}
+                    height={16}
+                  />
+                </span>
                 Responsibility
               </h4>
               <hr className={scss.hr} />
@@ -63,8 +67,9 @@ const MainValue: FC = () => {
 
             <div className={scss.card}>
               <h4 className={scss.title}>
-                {" "}
-                <Icons name={"cpu"} classIcons={""} width={16} height={16} />
+                <span className={scss.icon_container}>
+                  <Icons name={"cpu"} classIcons={""} width={16} height={16} />
+                </span>
                 Innovation
               </h4>
               <hr className={scss.hr} />
@@ -74,13 +79,14 @@ const MainValue: FC = () => {
             </div>
             <div className={scss.card}>
               <h4 className={scss.title}>
-                {" "}
-                <Icons
-                  name={"ranking"}
-                  classIcons={""}
-                  width={16}
-                  height={16}
-                />
+                <span className={scss.icon_container}>
+                  <Icons
+                    name={"ranking"}
+                    classIcons={""}
+                    width={16}
+                    height={16}
+                  />
+                </span>
                 Quality{" "}
               </h4>
               <hr className={scss.hr} />
