@@ -12,7 +12,7 @@ const Footer: FC = () => {
   return (
     <footer className={scss.footer}>
       <hr className={scss.hr} />
-      <div>
+      <div className="container">
         <div className={scss.footer_grid}>
           <div className={scss.logo_container}>
             <Logo />
@@ -28,7 +28,7 @@ const Footer: FC = () => {
               </div>
 
               <div className={scss.arrow_up_mobile}>
-                <a href="#main" aria-label="arrow up">
+                <a href="#hero" aria-label="arrow up">
                   <BsArrowUpCircleFill size={32} className={scss.arrow} />
                 </a>
               </div>
@@ -39,9 +39,11 @@ const Footer: FC = () => {
             <SocialMedia />
           </div>
           <div className={scss.arrow_up}>
-            <a href="#main" aria-label="arrow up">
-              <BsArrowUpCircleFill size={32} className={scss.arrow} />
-            </a>
+            <button type="button">
+              <a href="#hero" aria-label="arrow up">
+                <BsArrowUpCircleFill size={32} className={scss.arrow} />
+              </a>
+            </button>
           </div>
         </div>
 

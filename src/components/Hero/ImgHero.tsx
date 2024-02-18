@@ -1,8 +1,4 @@
 import { FC } from "react";
-// import mobileHero1xJ from "../../images/hero-mobile@1x.jpg";
-// import mobileHero2xJ from "../../images/hero-mobile@2x.jpg";
-// import mobileHero1xW from "../../images/hero-mobile@1x.webp";
-// import mobileHero2xW from "../../images/hero-mobile@2x.webp";
 import tabletHero1xJ from "../../images/hero-tablet@1x.jpg";
 import tabletHero2xJ from "../../images/hero-tablet@2x.jpg";
 import tabletHero1xW from "../../images/hero-tablet@1x.webp";
@@ -36,18 +32,6 @@ const ImgHero: FC = () => {
           srcSet={`${tabletHero1xJ} 1x ,${tabletHero2xJ} 2x`}
           type="image/jpeg"
         />
-
-        {/* <source
-          media="(min-width: 320px)"
-          srcSet={`${mobileHero1xW} 1x ,${mobileHero2xW} 2x `}
-          type="image/webp"
-        />
-        <source
-          media="(min-width: 320px)"
-          srcSet={`${mobileHero1xJ} 1x , ${mobileHero2xJ} 2x`}
-          type="image/jpeg"
-        /> */}
-
         <img
           src={`${tabletHero1xJ}`}
           alt="Turbine"

@@ -101,57 +101,55 @@ const ImgComponent: FC<ResponsiveImgProps> = ({ img, alt, className }) => {
   }, [img]);
 
   return (
-    <picture>
-      <>
-        {images && (
-          <picture>
-            {images.mobileImg && (
-              <>
-                <source
-                  srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
-                  type="image/webp"
-                  media="(max-width:360px)"
-                />
-                <source
-                  srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
-                  type="image/jpeg"
-                  media="(max-width:360px)"
-                />
-              </>
-            )}
+    <>
+      {images && (
+        <picture>
+          {images.mobileImg && (
+            <>
+              <source
+                srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
+                type="image/webp"
+                media="(max-width:360px)"
+              />
+              <source
+                srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
+                type="image/jpeg"
+                media="(max-width:360px)"
+              />
+            </>
+          )}
 
-            <source
-              srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
-              type="image/webp"
-              media="(max-width:768px)"
-            />
-            <source
-              srcSet={`${images.tabletImg} 1x, ${images.tabletImg2x} 2x`}
-              type="image/jpeg"
-              media="(max-width:768px)"
-            />
+          <source
+            srcSet={`${images.tabletImgWeb} 1x, ${images.tabletImgWeb2x} 2x`}
+            type="image/webp"
+            media="(max-width:768px)"
+          />
+          <source
+            srcSet={`${images.tabletImg} 1x, ${images.tabletImg2x} 2x`}
+            type="image/jpeg"
+            media="(max-width:768px)"
+          />
 
-            <source
-              srcSet={`${images.desktopImgWeb} 1x, ${images.desktopImgWeb2x} 2x`}
-              type="image/webp"
-              media="(max-width:1240px)"
-            />
-            <source
-              srcSet={`${images.desktopImg} 1x, ${images.desktopImg2x} 2x`}
-              type="image/jpeg"
-              media="(max-width:1240px)"
-            />
-            <img
-              srcSet={` ${images.desktopImg} 1240w`}
-              alt={alt || "Wind turbine clean energy"}
-              loading="lazy"
-              sizes="(max-width: 767px) 360px, (min-width: 768px) 768px, (min-width: 1240px) 1240px"
-              className={`${scss.image} ${className || ""}`}
-            />
-          </picture>
-        )}
-      </>
-    </picture>
+          <source
+            srcSet={`${images.desktopImgWeb} 1x, ${images.desktopImgWeb2x} 2x`}
+            type="image/webp"
+            media="(max-width:1240px)"
+          />
+          <source
+            srcSet={`${images.desktopImg} 1x, ${images.desktopImg2x} 2x`}
+            type="image/jpeg"
+            media="(max-width:1240px)"
+          />
+          <img
+            srcSet={` ${images.desktopImg} 1240w`}
+            alt={alt || "Wind turbine clean energy"}
+            loading="lazy"
+            sizes="(max-width: 767px) 360px, (min-width: 768px) 768px, (min-width: 1240px) 1240px"
+            className={`${scss.image} ${className || ""}`}
+          />
+        </picture>
+      )}
+    </>
   );
 };
 
